@@ -1,3 +1,4 @@
+//exporting selectors for the checkout page
 export const elements = {
     emailInput: '#customer-email',
     firstNameInput: 'input[name="firstname"]',

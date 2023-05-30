@@ -1,3 +1,4 @@
+//exporting selectors for the navbar page
 export const elements = {
     navbar: '.nav-sections-items',
     whatsNewButton: '#ui-id-3',

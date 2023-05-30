@@ -1,3 +1,4 @@
+//exporting selectors for the shop page
 export const elements = {
     filterCategory: '.filter-options-title',
     filterSubCategory: '.allow > .filter-options-content > .items > li',

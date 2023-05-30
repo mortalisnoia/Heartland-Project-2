@@ -10,6 +10,7 @@ class paymentPage {
         cy.contains(paymentPageElements.placeOrderButton).should('be.visible');
     }
 
+    //Cypress can chain calls. This method veryfies if all the user information is shown on the billing page
     assertUserBillingInformationIsCorrect() {
         cy.fixture('utils.json').then((utils) => {
             cy.get(paymentPageElements.userBillingInformation).should('contain.text', utils.firstName)
@@ -29,6 +30,7 @@ class paymentPage {
         cy.contains(paymentPageElements.successMessage).should('be.visible');
     }
 
+    //Assert that the page URL is the one expected
     assertItIsTheSuccessPage() {
         cy.url().should('contain', paymentPageElements.successPageURL);
     }
@@ -40,6 +42,8 @@ class paymentPage {
         .then(parseFloat)
     }
 
+    //That's why I used fixtures. On the checkout page I have methods to save the item and shipping prices on a fixture file
+    //Here I get these values and compare them with the total value shown on the payment page, to make sure it didn't change
     assertTotalValueIsCorrect() {
         cy.get(paymentPageElements.cartValue).should('be.visible').then(() => {
             cy.fixture('utils.json').then((utils) => { 

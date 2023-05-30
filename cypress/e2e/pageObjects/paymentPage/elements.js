@@ -1,3 +1,4 @@
+//exporting selectors for the payment page
 export const elements = {
     placeOrderButton: 'Place Order',
     userBillingInformation: '.billing-address-details',

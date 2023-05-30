@@ -1,3 +1,4 @@
+//exporting selectors for the product page
 export const elements = {
     xs: 'XS',
     s: 'S',
