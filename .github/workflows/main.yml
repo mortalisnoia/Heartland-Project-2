@@ -1,0 +1,26 @@
+name: UI Tests
+
+on:
+  push:
+    branches: '**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      #Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.4.1
+        with:
+            node-version: 16
+
+      - name: Dependencies install
+        run: npm install
+
+      - name: Run All tests
+        run: npx cypress run
