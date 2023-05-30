@@ -26,23 +26,5 @@ When("I filter for a product category", () => {
 })
 
 Then("The number of products shown should be the same as the count on the filter", () => {
-    shopPage.assertNumberOfProductsListedIsEqualToFilterCount();
-
-        /*cy.fixture('userInformation').then((user) => {
-            checkoutPage.fillEmailAdress(user.email);
-            checkoutPage.fillFirstName(user.firstName);
-            checkoutPage.fillLastName(user.lastName);
-            checkoutPage.fillCompany(user.company);
-            checkoutPage.fillStreetAdress1(user.streetAdress1);
-            checkoutPage.fillStreetAdress2(user.streetAdress2);
-            checkoutPage.fillStreetAdress3(user.streetAdress3);
-            checkoutPage.fillCity(user.city);
-            checkoutPage.fillPostalCode(user.postalCode);
-            checkoutPage.fillPhoneNumber(user.phone);
-            checkoutPage.selectCountryByText(user.country);
-            checkoutPage.selectRegionByText(user.region);
-            checkoutPage.clickNextButton();
-            cy.contains('Place Order').click();
-        });*/
-        
+    shopPage.assertNumberOfProductsListedIsEqualToFilterCount(); 
 })
